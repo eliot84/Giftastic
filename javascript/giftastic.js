@@ -38,30 +38,64 @@ $( "#submitSearch" ).click(function() {
 
 //If the first time adding to an array
 if(gifty.initiateArray){
-Object.defineProperty(gifty, 'villains', { 
+	Object.defineProperty(gifty, 'villains', { 
 	//configurable: true,
 	value: [{villain: addVillain, rating: data.data[0].rating, animate: data.data[0].images.fixed_height.url}] });
 	
 	for(var i = 1; i < 4; i++){
 		gifty.villains.push({ villain: addVillain, rating: data.data[i].rating, animate: data.data[i].images.fixed_height.url });
 	}
+
+	 $("#allImages").append($('<div>', {class: "row"}));
+		$('.row').append($('<div>'));
+
+		for(var i = 0; i < gifty.villains.length; i++){
+			$('.row').prepend($('<img>', {src: gifty.villains[i].animate, class: "col-xs-12 col-sm-4 col-md-4 col-lg-4 float-left"}));
+		}
+
+
 	gifty.initiateArray = false;
 }
 //not the first time no need to define properties
 else
 {
+	console.log("do me");
+	for(var i = 0; i < 4; i++){
+		gifty.villains.push({ villain: addVillain, rating: data.data[i].rating, animate: data.data[i].images.fixed_height.url });
+	}
+
+	console.log(gifty);
+		console.log(gifty.villains.length - 4);
+ 	
+ 	 $("#allImages").append($('<div>', {class: "row", id: "two"}));
+			$('.row').append($('<div>'));
+
+			for(var i = gifty.villains.length -4; i < gifty.villains.length; i++){
+				$('#two').prepend($('<img>', {src: gifty.villains[i].animate, class: "col-xs-12 col-sm-4 col-md-4 col-lg-4 float-left"}));
+			}
+
 
 }
 
-console.log(gifty);
 
-  	 $("#allImages").append($('<div>', {class: "row"}));
-			$('.row').append($('<div>'));
+ 
 
-			for(var i = 0; i < 4; i++){
-				$('.row').append($('<img>', {src: gifty.villains[i].animate, class: "col-xs-12 col-sm-3 col-md-3 col-lg-3 float-left"}));
 
-			}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
