@@ -1,4 +1,4 @@
-//able to print out an image from the api v2
+
 
 gifty = {
 			villains: [{villain: "joker"}, {villain: "Captain Hook"}],
@@ -33,9 +33,37 @@ $( "#submitSearch" ).click(function() {
 				//access image url
 				var url = data.data[0].images.fixed_height.url;
 				gifty.villains.push({villain: addVillain, rating: rating, url: url }); //add the submitted variable to the villains array in gifty
+/*
+					  	 $("#image").attr("src", url);
+
+					  	 $("#allImages").append($('<div>', {class: "row", id: "this"}));
+					  	 $(".row").append($('<div>', {class: "col-xs-12 col-sm-6 col-md-4 col-md-3", id: "inHere"}));
+						/*$('#inHere').append($('<img>', {src: url, class: "float-left", id: "pic"}));
+						$('#inHere').append($('<img>', {src: url, class: "float-left", id: "pic"}));
+						$('#inHere').append($('<img>', {src: url, class: "float-left", id: "pic"}));
+						$('#inHere').append($('<img>', {src: url, class: "float-left", id: "pic"})); */
+					
+					//	 $('#pic').attr("src", url); 
+			/*
+				for (var i = 0; i < 4; i++)
+				{
+					  var addImage = '<img id="image">';
+					  $("#allImages").append( '<div class="row">' + '<div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 id="hello"">' + '</div>' + '</div>');
+
+					  for(var x = 0; x < 4; x++){
+					  	$("#hello").append('<img id="image' + x + '">' +'</div>');
+					  	 $('"#image' + x + '"').attr("src", url);
+					  }
+				
 
 
-				$("#image").attr("src", url);
+
+					 
+					  console.log("done");
+				}
+*/
+
+				//$("#image").attr("src", url);
 
 
 			    });
