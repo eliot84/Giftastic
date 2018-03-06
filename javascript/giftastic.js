@@ -1,4 +1,4 @@
-
+//able to print out an image from the api v2
 
 gifty = {
 			villains: [{villain: "joker"}, {villain: "Captain Hook"}],
@@ -15,7 +15,7 @@ $( "#submitSearch" ).click(function() {
 	var addVillain = $( "#searchThis" ).val();
 	gifty.q = addVillain;
 
-  	gifty.villains.push({villain: addVillain}); //add the submitted variable to the villains array in gifty
+  	
 
   	//var currQuery = gifty.villains[gifty.villains.length - 1].villain; //assign the 
 
@@ -24,11 +24,18 @@ $( "#submitSearch" ).click(function() {
 
 			   	console.log("success got data", data);
 				
+			   	//access image url
+				console.log(data.data[0].images.fixed_height.url);
 
 			   	//access rating
-				console.log(data.data[0].rating);
+				var rating = data.data[0].rating;
+
+				//access image url
+				var url = data.data[0].images.fixed_height.url;
+				gifty.villains.push({villain: addVillain, rating: rating, url: url }); //add the submitted variable to the villains array in gifty
 
 
+				$("#image").attr("src", url);
 
 
 			    });
