@@ -6,7 +6,7 @@ Hi, Thanks for checking out my project. This is a basic excercise in working wit
 
 ## Purpose
 
-The purpose of this excercise is to explore different aspects of JS programming including functions, arrays, multidimensional arrays, ajax if else statements, jquery and using Api's. More specifically, I am avoiding the use of global variables by using an object with all parameters and methods that I call on in my logic.js file.
+The purpose of this excercise is to explore different aspects of JS programming including functions, arrays, multidimensional arrays, ajax if else statements, jquery and using Api's. More specifically, I am avoiding the use of global variables by using an object and creating elements on the page dynamically.
 
 ## Getting Started
 
