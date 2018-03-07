@@ -1,5 +1,8 @@
 body{
-	background-color: #e6def9;
+	background-color: black;
+	color: white;
+	padding-top: 10px;
+	padding-left: 10px;
 }
 
 #red{
@@ -11,13 +14,21 @@ body{
 }
 
 .row{
-	background-color: blue;
+	background-color: black;
 }
 
 img{
-	margin-right: 10px;
+	margin-right: 5px;
 	margin-top: 10px;
+	margin-left: 5px;
 	width: 380px;
 	height: 240px;
+}
+
+.btn-default{
+	background-color: red;
+	color: white;
+	margin-top: 5px;
+	margin-right: 5px;
 }
 
