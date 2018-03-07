@@ -44,7 +44,7 @@ $(".predefined").on("click", "button", function() {
 	gifty.q = addVillain;
 
 	$.ajax({
-		url: "http://api.giphy.com/v1/gifs/search?q=" + gifty.q + "&api_key=" + gifty.apiKey + "&limit=20",
+		url: "https://api.giphy.com/v1/gifs/search?q=" + gifty.q + "&api_key=" + gifty.apiKey + "&limit=20",
 		type: "GET",
 		success: function(data){
 			//If an array of items was not pulled from the call
