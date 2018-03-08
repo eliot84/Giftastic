@@ -75,7 +75,7 @@ $(".predefined").on("click", "button", function() {
 						for(var i = 0; i < gifty.villains.length; i++){
 							$('.row').append($('<div>', {class: "col-xs-12 col-sm-6 col-md-4 col-lg-3 float-left", id: "col" + [i]}));
 							$('#col' + [i]).append($('<div>', {class: "contentHolder" + [i], id: "contentHolder"}));
-							$(".contentHolder" + [i]).text(gifty.villains[i].rating);
+							$(".contentHolder" + [i]).text("Rating: " + gifty.villains[i].rating);
 							$('.contentHolder' + [i]).append($('<img>', {src: gifty.villains[i].animate, id: [i], "state": "animate", "data-animate": gifty.villains[i].animate, "data-still": gifty.villains[i].still }));
 						}
 					
@@ -95,7 +95,7 @@ $(".predefined").on("click", "button", function() {
 						//
 						$('.row').append($('<div>', {class: "col-xs-12 col-sm-6 col-md-4 col-lg-3 float-left", id: "col" + [i]}));
 							$('#col' + [i]).append($('<div>', {class: "contentHolder" + [i]}));
-							$(".contentHolder" + [i]).text(gifty.villains[i].rating);
+							$(".contentHolder" + [i]).text("Rating: " + gifty.villains[i].rating);
 							$('.contentHolder' + [i]).append($('<img>', {src: gifty.villains[i].animate, id: [i], "state": "animate", "data-animate": gifty.villains[i].animate, "data-still": gifty.villains[i].still }));
 				} //for
 			} //else
